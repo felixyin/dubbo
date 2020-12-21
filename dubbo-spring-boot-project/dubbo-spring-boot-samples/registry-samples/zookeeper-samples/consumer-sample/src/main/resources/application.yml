@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: dubbo-registry-zookeeper-consumer-sample
+
+demo:
+  service:
+    version: 1.0.0
+
+embedded:
+  zookeeper:
+    port: 2181
+
+dubbo:
+  # 多注册中心，高可用则可继续搭建和配置haproxy、keepalived
+  registries:
+    zoo1:
+      address: zookeeper://zoo1:${embedded.zookeeper.port}
+    zoo2:
+      address: zookeeper://zoo2:${embedded.zookeeper.port}
+    zoo3:
+      address: zookeeper://zoo3:${embedded.zookeeper.port}
+  registry:
+    # 单注册中心
+    # address: zookeeper://zoo1:${embedded.zookeeper.port}
+    file: ./dubbo-cache/${spring.application.name}/dubbo.cache
