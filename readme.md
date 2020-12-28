@@ -107,4 +107,4 @@ https://github.com/google/error-prone/issues/359
     目录： dubbo-spring-boot-project/dubbo-spring-boot-samples/registry-samples/zookeeper-samples
     - 配置和启动 provider
     - 配置和启动 consumer
-    - pring “dubbo-registry-zookeeper-provider-sample] : Hello, mercyblitz”
+    - 控制台： “dubbo-registry-zookeeper-provider-sample] : Hello, mercyblitz”
